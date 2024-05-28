@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<style>
+    body{
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(to bottom right, #ff7f50, #e9576d);
+        user-select: none;
+    }
+    #reg{
+        width: 350px;
+        padding: 30px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2{
+        color: #333;
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    label{
+        display: block;
+        margin-bottom: 8px;
+        color: #504444;
+        font-weight: bold;
+
+    }
+    input{
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    button{
+        background: linear-gradient(to right, #2e5cf3, #0237e4);
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 20px auto;
+        font-size: 1rem;
+        display: block;
+        width: fit-content;
+    }
+    button:hover{
+        background: linear-gradient(to right, #0a2990, #0d40e6);
+    }
+    
+    .success-message {
+        display: none;  
+        color: green;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <form id="reg">
+        <h2>
+            Registration Form
+        </h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="button" onclick="submitted()">Register</button>
+        <p class="success-message">Form submitted successfully!</p>
+
+    </form>
+    <script>
+        function submitted()
+        {
+            document.querySelector('.success-message').style.display = 'block'; 
+        }
+    </script>
+</body>
+</html>
